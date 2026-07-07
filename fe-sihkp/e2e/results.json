@@ -1,0 +1,100 @@
+[
+  {
+    "no": 1,
+    "module": "Pantau Harga",
+    "scenario": "Memuat peta tematik",
+    "status": "\u001b[32m✓\u001b[0m",
+    "elapsed": "8.8"
+  },
+  {
+    "no": 2,
+    "module": "Pantau Harga",
+    "scenario": "Filter komoditas",
+    "status": "\u001b[32m✓\u001b[0m",
+    "elapsed": "7.2"
+  },
+  {
+    "no": 3,
+    "module": "Pantau Harga",
+    "scenario": "Filter periode",
+    "status": "\u001b[32m✓\u001b[0m",
+    "elapsed": "6.9"
+  },
+  {
+    "no": 4,
+    "module": "Pantau Harga",
+    "scenario": "Klik kabupaten di peta",
+    "status": "\u001b[32m✓\u001b[0m",
+    "elapsed": "5.2"
+  },
+  {
+    "no": 5,
+    "module": "Analisis / Antar Kota",
+    "scenario": "Perbandingan dua wilayah",
+    "status": "\u001b[32m✓\u001b[0m",
+    "elapsed": "12.2"
+  },
+  {
+    "no": 6,
+    "module": "Analisis / Antar Kota",
+    "scenario": "Perbandingan multi-wilayah",
+    "status": "\u001b[32m✓\u001b[0m",
+    "elapsed": "1.2"
+  },
+  {
+    "no": 7,
+    "module": "Analisis / Antar Kota",
+    "scenario": "Tabel perbandingan",
+    "status": "\u001b[32m✓\u001b[0m",
+    "elapsed": "1.2"
+  },
+  {
+    "no": 8,
+    "module": "Analisis / Pedagang Besar",
+    "scenario": "Memuat data PIHPS",
+    "status": "\u001b[32m✓\u001b[0m",
+    "elapsed": "4.1"
+  },
+  {
+    "no": 9,
+    "module": "Analisis / Pedagang Besar",
+    "scenario": "Perbandingan retail vs grosir",
+    "status": "\u001b[32m✓\u001b[0m",
+    "elapsed": "4.5"
+  },
+  {
+    "no": 10,
+    "module": "Prediksi",
+    "scenario": "Memuat prediksi H+1–H+4",
+    "status": "\u001b[32m✓\u001b[0m",
+    "elapsed": "6.6"
+  },
+  {
+    "no": 11,
+    "module": "Prediksi",
+    "scenario": "Komoditas tanpa model",
+    "status": "\u001b[32m✓\u001b[0m",
+    "elapsed": "5.3"
+  },
+  {
+    "no": 12,
+    "module": "Prediksi",
+    "scenario": "Validasi data terkini",
+    "status": "\u001b[32m✓\u001b[0m",
+    "elapsed": "5.6"
+  },
+  {
+    "no": 19,
+    "module": "Sistem",
+    "scenario": "Performa halaman",
+    "status": "\u001b[32m✓\u001b[0m",
+    "elapsed": "3.2"
+  },
+  {
+    "no": 20,
+    "module": "Sistem",
+    "scenario": "Responsivitas antarmuka",
+    "status": "\u001b[32m✓\u001b[0m",
+    "elapsed": "3.3"
+  }
+]

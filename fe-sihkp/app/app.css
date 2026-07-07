@@ -1,0 +1,272 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+/* Latin-only Inter Variable — drops ~170 KB of unused Cyrillic/Greek/Vietnamese subsets.
+   font-display: optional prevents FOUT/CLS: system font is used if Inter isn't ready in time. */
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-display: optional;
+  font-weight: 100 900;
+  src: url('@fontsource-variable/inter/files/inter-latin-wght-normal.woff2') format('woff2-variations');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --font-heading: var(--font-sans);
+  --font-sans: 'Inter Variable', sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-steel: var(--steel);
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  --brand-coral: #ff5530;
+  --brand-magenta: #ea5ec1;
+  --brand-blue: #1456f0;
+  --brand-purple: #a855f7;
+  --canvas: oklch(1 0 0);
+  --surface: #f7f8fa;
+  --ink: #0a0a0a;
+  --steel: #5f5f5f;
+  --hairline: oklch(0.922 0 0);
+  /* Feature card gradient RGB values (used in beranda.tsx with rgb() syntax) */
+  --feature-blue-rgb: 29 78 216;
+  --feature-orange-rgb: 194 65 12;
+  --feature-purple-rgb: 109 40 217;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+  --canvas: oklch(0.145 0 0);
+  --surface: oklch(0.19 0 0);
+  --ink: oklch(0.985 0 0);
+  --steel: oklch(0.63 0 0);
+  --hairline: oklch(1 0 0 / 10%);
+  /* Darker feature card colors for dark mode */
+  --feature-blue-rgb: 30 58 138;
+  --feature-orange-rgb: 124 45 18;
+  --feature-purple-rgb: 76 29 149;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Leaflet tooltip override for the choropleth map */
+.leaflet-tooltip.sihpm-map-tooltip {
+  background: #0a0a0a;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: var(--font-sans, "Geist Variable", sans-serif);
+  font-size: 12px;
+  line-height: 1.4;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  white-space: nowrap;
+}
+.leaflet-tooltip.sihpm-map-tooltip::before {
+  border-top-color: #0a0a0a;
+}
+.leaflet-tooltip-top.sihpm-map-tooltip::before {
+  border-top-color: #0a0a0a;
+}
+.leaflet-tooltip-bottom.sihpm-map-tooltip::before {
+  border-bottom-color: #0a0a0a;
+}
+.leaflet-tooltip-left.sihpm-map-tooltip::before {
+  border-left-color: #0a0a0a;
+}
+.leaflet-tooltip-right.sihpm-map-tooltip::before {
+  border-right-color: #0a0a0a;
+}
+
+/* Island drop-shadow + smooth fill transitions on the choropleth */
+.leaflet-overlay-pane svg path {
+  filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.15));
+  transition: fill-opacity 0.3s ease, fill 0.3s ease, filter 0.1s ease;
+  cursor: pointer;
+}
+
+/* Remove drop-shadow during drag to avoid jitter */
+.leaflet-dragging .leaflet-overlay-pane svg path {
+  filter: none;
+}
+.leaflet-container {
+  background: #1a3a5c;
+}
+.my-choropleth .leaflet-container {
+  background: #1a3a5c;
+}
+
+/* Shift CARTO Voyager ocean tiles toward #1a3a5c without touching the choropleth overlay */
+.leaflet-tile-pane {
+  filter: brightness(0.9) saturate(2.35);
+}
+
+/* Dark mode Leaflet overrides */
+.dark .leaflet-container {
+  background: #0e1e32;
+}
+.dark .leaflet-tile-pane {
+  filter: brightness(1) saturate(1); /* dark tiles are already dark — reset the light-mode filter */
+}
+.dark .leaflet-bar a {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  border-bottom-color: #334155;
+}
+.dark .leaflet-bar a:hover {
+  background-color: #2d3f55;
+  color: #fff;
+}
+
+/* Subtle attribution styling */
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  font-size: 9px !important;
+  color: var(--steel, #5f5f5f) !important;
+  padding: 2px 6px !important;
+}
+.leaflet-control-attribution a {
+  color: var(--steel, #5f5f5f) !important;
+}

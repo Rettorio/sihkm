@@ -1,0 +1,3 @@
+[submodule "raw_data/projek_akhir_data"]
+	path = raw_data/projek_akhir_data
+	url = https://github.com/Rettorio/projek_akhir_data.git

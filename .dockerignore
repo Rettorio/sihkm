@@ -1,0 +1,35 @@
+# Python
+.venv/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.egg-info/
+
+# Large source data — not needed at runtime
+raw_data/
+notebooks/
+geojson/
+harga_harian/
+results_pihps/
+documents/
+data.json
+db.sqlite3
+
+# Git
+.git/
+.gitignore
+
+# Django-generated dirs (recreated at container startup)
+staticfiles/
+media/
+
+# Frontend artifacts (built inside Docker, not from host)
+fe-sihkp/node_modules/
+fe-sihkp/build/
+fe-sihkp/.react-router/
+
+# Misc
+*.log
+.DS_Store
+skills-lock.json
+MIGRATION_WHOLESALE.md
