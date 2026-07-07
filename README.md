@@ -2,7 +2,8 @@
 
 A food commodity price monitoring and forecasting platform focused on the Maluku Province, Indonesia. SIHKM aggregates daily price data from multiple government sources (SP2KP and PIHPS) across 11 regencies, provides a geospatial web interface for analysis, and uses XGBoost-based forecasting to predict price movements up to four periods ahead.
 
-![SIHKM Dashboard Preview](https://placehold.co/800x400/1e3a5f/ffffff?text=SIHKM+Dashboard+Preview)
+![SIHKM Dashboard Preview](<img width="1063" height="731" alt="sihkm_beranda" src="https://github.com/user-attachments/assets/1dcd8a64-be02-4c90-b6b0-3928ccddff96" />
+)
 
 ## Key Features
 
@@ -66,7 +67,7 @@ SIHKM transitions from **reactive monitoring** (what happened) to **proactive fo
               └──────┬──────┘  └─────┬──────────┘
                      │               │
               ┌──────▼──────────────────▼────────┐
-              │  Frontend (React SPA)            │
+              │  Frontend (Hono React)           │
               │  Beranda · Pantau Harga          │
               │  Analisis Harga · Versus ·       │
               │  Prediksi                        │
