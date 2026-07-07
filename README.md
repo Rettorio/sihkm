@@ -4,6 +4,13 @@ A food commodity price monitoring and forecasting platform focused on the Maluku
 
 <img width="1063" height="731" alt="sihkm_beranda" src="https://github.com/user-attachments/assets/d2ae7f53-e0d5-4a02-9668-d5ddf423a30c" />
 
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue?style=for-the-badge)](https://www.python.org)
+[![Django](https://img.shields.io/badge/django-6.0-092E20?style=for-the-badge&logo=django)](https://www.djangoproject.com)
+[![XGBoost](https://img.shields.io/badge/XGBoost-3.2-FF6600?style=for-the-badge)](https://xgboost.readthedocs.io)
+[![React](https://img.shields.io/badge/react-19-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev)
+[![Hono](https://img.shields.io/badge/hono-2.26-%23E36002?style=for-the-badge&logo=hono&logoColor=white)](https://hono.dev)
+
+<img alt="roberto" src="roberto_black.gif" width="64">
 
 ## Key Features
 
